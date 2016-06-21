@@ -1,6 +1,6 @@
 OneLineList
 ========
-Create an entire recycler view list with just one line of code and a few annotations
+Create an entire recycler view based list with just one line of code and a few annotations
 
 ##A Quick Example
 
@@ -19,7 +19,7 @@ Example of creating a list in the onCreate method of an Activity
 OneLineList<Data> oneLineList = new OneLineList<>(Data.class, dataList, recyclerView, R.layout.row, this);
 ```
 
-##Anotations
+##Annotations
 
 Use annotations to select the fields in your data class that you wish to bind 
 to the row layout. OneLineList will match the field name with the resource id 
