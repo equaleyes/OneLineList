@@ -6,6 +6,7 @@ import com.equaleyes.onelinelist.binders.CheckBoxBinder;
 import com.equaleyes.onelinelist.binders.ImageViewBinder;
 import com.equaleyes.onelinelist.binders.TextViewBinder;
 import com.equaleyes.onelinelist.binders.TextViewTextColorBinder;
+import com.equaleyes.onelinelist.utils.ArrayListUtils;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
@@ -31,11 +32,13 @@ public class BinderFinder {
 
             Class<? extends Annotation> annotationTypeForBinder = binder.getAnnotationType();
 
-            if (field.isAnnotationPresent(annotationTypeForBinder)) {
-                try {
-                    bindersForField.add(binder.getClass().newInstance());
-                } catch (InstantiationException | IllegalAccessException e) {
-                    e.printStackTrace();
+            if (annotationTypeForBinder != null) {
+                if (field.isAnnotationPresent(annotationTypeForBinder)) {
+                    try {
+                        bindersForField.add(binder.getClass().newInstance());
+                    } catch (InstantiationException | IllegalAccessException e) {
+                        e.printStackTrace();
+                    }
                 }
             }
         }
@@ -44,6 +47,6 @@ public class BinderFinder {
     }
 
     public void addBinder(Binder binder) {
-        this.binders.add(binder);
+        ArrayListUtils.insertIfNotYetInList(binders, binder);
     }
 }
