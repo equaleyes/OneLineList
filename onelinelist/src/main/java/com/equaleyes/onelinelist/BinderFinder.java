@@ -2,6 +2,7 @@ package com.equaleyes.onelinelist;
 
 import com.equaleyes.onelinelist.binders.Binder;
 import com.equaleyes.onelinelist.binders.BoldOnEvenBinder;
+import com.equaleyes.onelinelist.binders.CheckBoxBinder;
 import com.equaleyes.onelinelist.binders.ImageViewBinder;
 import com.equaleyes.onelinelist.binders.TextViewBinder;
 import com.equaleyes.onelinelist.binders.TextViewTextColorBinder;
@@ -19,6 +20,8 @@ public class BinderFinder {
         binders.add(new TextViewTextColorBinder());
         binders.add(new BoldOnEvenBinder());
         binders.add(new ImageViewBinder());
+        binders.add(new CheckBoxBinder());
+        binders.add(new TextViewTextColorBinder());
     }
 
     public ArrayList<Binder> findBindersForField(Field field) {

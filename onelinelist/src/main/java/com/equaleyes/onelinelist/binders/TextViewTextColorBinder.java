@@ -7,7 +7,7 @@ import com.equaleyes.onelinelist.annotations.TextColor;
 
 import java.lang.annotation.Annotation;
 
-public class TextViewTextColorBinder extends Binder {
+public class TextViewTextColorBinder extends Binder<String> {
 
     @Override
     public Class<? extends Annotation> getAnnotationType() {
@@ -15,7 +15,7 @@ public class TextViewTextColorBinder extends Binder {
     }
 
     @Override
-    protected void bindDataToView(Object data) {
-        ((TextView)view).setTextColor(Color.parseColor((String)data));
+    protected void bindDataToView(String data) {
+        ((TextView)view).setTextColor(Color.parseColor(data));
     }
 }
