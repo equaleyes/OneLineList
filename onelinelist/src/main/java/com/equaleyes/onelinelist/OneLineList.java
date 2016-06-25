@@ -19,7 +19,7 @@ public class OneLineList<T> {
     int layoutId;
     BinderFinder binderFinder = new BinderFinder();
 
-    OneListAdapter<T> oneListAdapter;
+    OneLineListAdapter<T> oneLineListAdapter;
 
     public OneLineList(Class<T> classType, ArrayList<T> dataList, RecyclerView recyclerView, int layoutId, Context context) {
         this.dataList = dataList;
@@ -32,19 +32,19 @@ public class OneLineList<T> {
     }
 
     private void setupRecyclerView() {
-        this.oneListAdapter = new OneListAdapter<>(classType, dataList, layoutId, binderFinder, context);
+        this.oneLineListAdapter = new OneLineListAdapter<>(classType, dataList, layoutId, binderFinder, context);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(context.getApplicationContext());
         this.recyclerView.setLayoutManager(mLayoutManager);
         this.recyclerView.setItemAnimator(new DefaultItemAnimator());
-        this.recyclerView.setAdapter(this.oneListAdapter);
+        this.recyclerView.setAdapter(this.oneLineListAdapter);
     }
 
     public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
-        oneListAdapter.setOnItemClickListener(onItemClickListener);
+        oneLineListAdapter.setOnItemClickListener(onItemClickListener);
     }
 
     public void removeOnItemClickListener(OnItemClickListener onItemClickListener) {
-        oneListAdapter.removeOnItemClickListener(onItemClickListener);
+        oneLineListAdapter.removeOnItemClickListener(onItemClickListener);
     }
 
     public void addBinder(Binder binder) {
@@ -52,6 +52,6 @@ public class OneLineList<T> {
     }
 
     public void dataHasChanged() {
-        this.oneListAdapter.notifyDataSetChanged();
+        this.oneLineListAdapter.notifyDataSetChanged();
     }
 }

@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.equaleyes.onelinelist.binders.Binder;
+import com.equaleyes.onelinelist.utils.ResourceIdFinder;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;

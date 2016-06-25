@@ -11,7 +11,7 @@ import com.equaleyes.onelinelist.utils.ArrayListUtils;
 
 import java.util.ArrayList;
 
-public class OneListAdapter<T> extends RecyclerView.Adapter<OneLineListViewHolder<T>> implements View.OnClickListener {
+public class OneLineListAdapter<T> extends RecyclerView.Adapter<OneLineListViewHolder<T>> implements View.OnClickListener {
 
     int layoutId;
     Class classType;
@@ -20,7 +20,7 @@ public class OneListAdapter<T> extends RecyclerView.Adapter<OneLineListViewHolde
     ArrayList<OnItemClickListener> onItemClickListeners = new ArrayList<>();
     BinderFinder binderFinder;
 
-    public OneListAdapter(Class classType, ArrayList<T> dataList, int layoutId, BinderFinder binderFinder, Context context) {
+    public OneLineListAdapter(Class classType, ArrayList<T> dataList, int layoutId, BinderFinder binderFinder, Context context) {
         this.layoutId = layoutId;
         this.dataList = dataList;
         this.classType = classType;
