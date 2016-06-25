@@ -16,6 +16,9 @@ import static org.junit.Assert.*;
 
 public class BinderFinderTest {
 
+    @Rule
+    public ExpectedException exception = ExpectedException.none();
+
     @Test
     public void oneBinderForAnnotation() throws Exception {
         BinderFinder binderFinder = getBinderFinderWithBinders(TextViewBinder.class);
@@ -90,9 +93,6 @@ public class BinderFinderTest {
         Field textTestField = getTestField("testTitle");
         binderFinder.findBindersForField(textTestField);
     }
-
-    @Rule
-    public ExpectedException exception = ExpectedException.none();
 
     @Test
     public void binderConstructorPrivate() throws Exception {
