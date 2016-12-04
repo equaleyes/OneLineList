@@ -16,7 +16,7 @@ public class Data {
 Example of creating a list in the onCreate method of an Activity
 
 ```java
-OneLineList<Data> oneLineList = new OneLineList<>(Data.class, dataList, recyclerView, R.layout.row, this);
+OneLineList<Data> quickList = new OneLineList<>(Data.class, dataList, recyclerView, R.layout.row, this);
 ```
 
 ##Annotations
@@ -106,7 +106,7 @@ To create a RecycleViewAdapter and generate the ViewHolder for your data class, 
 Create an instance of the OneLineList and pass in the required parameteres. 
 
 ```java
-OneLineList<Data> oneLineList = new OneLineList<>(Data.class, dataList, recyclerView, R.layout.row, this);
+OneLineList<Data> quickList = new OneLineList<>(Data.class, dataList, recyclerView, R.layout.row, this);
 ```
 
 You need to pass in a class type of your Data class that holds the data you wish to show in the recycler view.
@@ -116,7 +116,7 @@ You also need to pass in an ArrayList with the actual data, layout for the row a
 
 You can easily add an onItemClickListener to the OneLineList. Simply register the onItemClickListener
 ```java
-oneLineList.setOnItemClickListener(new OnItemClickListener() {
+quickList.setOnItemClickListener(new OnItemClickListener() {
   @Override
   public void onItemClickListener(int position) {
   }
@@ -164,7 +164,7 @@ the annotated field, context and position inside the list.
 In the end you need to pass your CustomBinder to the OneLineList.
 
 ```java
-OneLineList<Data> oneLineList = new OneLineList<>(Data.class, dataList, recyclerView, R.layout.row, this);
-oneLineList.addBinder(new CustomBinder());
+OneLineList<Data> quickList = new OneLineList<>(Data.class, dataList, recyclerView, R.layout.row, this);
+quickList.addBinder(new CustomBinder());
 ```
 

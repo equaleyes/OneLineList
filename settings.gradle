@@ -1,1 +1,1 @@
-include ':app', ':onelinelist'
+include ':app', ':quicklist'
