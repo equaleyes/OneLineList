@@ -7,7 +7,7 @@ import com.equaleyes.onelinelist.annotations.TextBold;
 
 import java.lang.annotation.Annotation;
 
-public class TextBoldBinder extends Binder<Boolean> {
+class TextBoldBinder extends Binder<Boolean> {
 
     @Override
     public Class<? extends Annotation> getAnnotationType() {

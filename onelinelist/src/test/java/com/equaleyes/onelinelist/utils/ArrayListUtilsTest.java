@@ -1,11 +1,5 @@
 package com.equaleyes.onelinelist.utils;
 
-import com.equaleyes.onelinelist.binders.Binder;
-import com.equaleyes.onelinelist.binders.BoldOnEvenBinder;
-import com.equaleyes.onelinelist.binders.CheckBoxBinder;
-import com.equaleyes.onelinelist.binders.ImageViewBinder;
-import com.equaleyes.onelinelist.binders.TextViewBinder;
-
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -16,27 +10,27 @@ public class ArrayListUtilsTest {
 
     @Test
     public void insertInEmptyListTest() {
-        ArrayList<Binder> binders = new ArrayList<>();
-        ArrayListUtils.insertIfNotYetInList(binders, new TextViewBinder());
+        ArrayList<TestClass> binders = new ArrayList<>();
+        ArrayListUtils.insertIfNotYetInList(binders, new TestClass());
 
         assertEquals(1, binders.size());
     }
 
     @Test
     public void insertMultipleObjectsTest() {
-        ArrayList<Binder> binders = new ArrayList<>();
-        ArrayListUtils.insertIfNotYetInList(binders, new TextViewBinder());
-        ArrayListUtils.insertIfNotYetInList(binders, new BoldOnEvenBinder());
-        ArrayListUtils.insertIfNotYetInList(binders, new CheckBoxBinder());
-        ArrayListUtils.insertIfNotYetInList(binders, new ImageViewBinder());
+        ArrayList<TestClass> binders = new ArrayList<>();
+        ArrayListUtils.insertIfNotYetInList(binders, new TestClass());
+        ArrayListUtils.insertIfNotYetInList(binders, new TestClass());
+        ArrayListUtils.insertIfNotYetInList(binders, new TestClass());
+        ArrayListUtils.insertIfNotYetInList(binders, new TestClass());
 
         assertEquals(4, binders.size());
     }
 
     @Test
     public void addingTheSameInstanceTwice() throws Exception {
-        ArrayList<Binder> binders = new ArrayList<>();
-        Binder binder = new BoldOnEvenBinder();
+        ArrayList<TestClass> binders = new ArrayList<>();
+        TestClass binder = new TestClass();
 
         ArrayListUtils.insertIfNotYetInList(binders, binder);
         ArrayListUtils.insertIfNotYetInList(binders, binder);
@@ -46,21 +40,21 @@ public class ArrayListUtilsTest {
 
     @Test
     public void addingTheSameTypeTwice() throws Exception {
-        ArrayList<Binder> binders = new ArrayList<>();
+        ArrayList<TestClass> binders = new ArrayList<>();
 
-        ArrayListUtils.insertIfNotYetInList(binders, new BoldOnEvenBinder());
-        ArrayListUtils.insertIfNotYetInList(binders, new BoldOnEvenBinder());
+        ArrayListUtils.insertIfNotYetInList(binders, new TestClass());
+        ArrayListUtils.insertIfNotYetInList(binders, new TestClass());
 
         assertEquals(2, binders.size());
     }
 
     @Test
     public void removeFromListCorrectSize() throws Exception {
-        ArrayList<Binder> binders = new ArrayList<>();
+        ArrayList<TestClass> binders = new ArrayList<>();
 
-        Binder binder = new TextViewBinder();
+        TestClass binder = new TestClass();
 
-        ArrayListUtils.insertIfNotYetInList(binders, new BoldOnEvenBinder());
+        ArrayListUtils.insertIfNotYetInList(binders, new TestClass());
         ArrayListUtils.insertIfNotYetInList(binders, binder);
 
         ArrayListUtils.removeFromList(binders, binder);
@@ -70,10 +64,10 @@ public class ArrayListUtilsTest {
 
     @Test
     public void removeFromListCorrectObject() throws Exception {
-        ArrayList<Binder> binders = new ArrayList<>();
+        ArrayList<TestClass> binders = new ArrayList<>();
 
-        Binder binder = new TextViewBinder();
-        Binder bold = new BoldOnEvenBinder();
+        TestClass binder = new TestClass();
+        TestClass bold = new TestClass();
 
         ArrayListUtils.insertIfNotYetInList(binders, bold);
         ArrayListUtils.insertIfNotYetInList(binders, binder);
@@ -85,9 +79,9 @@ public class ArrayListUtilsTest {
 
     @Test
     public void removeFromEmptyList() throws Exception {
-        ArrayList<Binder> binders = new ArrayList<>();
+        ArrayList<TestClass> binders = new ArrayList<>();
 
-        Binder binder = new TextViewBinder();
+        TestClass binder = new TestClass();
 
         ArrayListUtils.removeFromList(binders, binder);
 
@@ -96,9 +90,9 @@ public class ArrayListUtilsTest {
 
     @Test
     public void insertTest() {
-        ArrayList<Binder> binders = new ArrayList<>();
-        ArrayListUtils.insertIfNotYetInList(binders, new TextViewBinder());
-        ArrayListUtils.insertIfNotYetInList(binders, new TextViewBinder());
+        ArrayList<TestClass> binders = new ArrayList<>();
+        ArrayListUtils.insertIfNotYetInList(binders, new TestClass());
+        ArrayListUtils.insertIfNotYetInList(binders, new TestClass());
 
         assertEquals(2, binders.size());
     }

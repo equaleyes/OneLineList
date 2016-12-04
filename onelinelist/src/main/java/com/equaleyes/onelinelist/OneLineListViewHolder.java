@@ -5,12 +5,13 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.equaleyes.onelinelist.binders.Binder;
+import com.equaleyes.onelinelist.binders.BinderFinder;
 import com.equaleyes.onelinelist.utils.ResourceIdFinder;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 
-public class OneLineListViewHolder<T> extends RecyclerView.ViewHolder {
+class OneLineListViewHolder<T> extends RecyclerView.ViewHolder {
 
     private View view;
     private ArrayList<Binder> binders = new ArrayList<>();

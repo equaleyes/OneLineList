@@ -5,7 +5,7 @@ import android.widget.CompoundButton;
 
 import java.lang.annotation.Annotation;
 
-public class CheckBoxBinder extends Binder<Boolean> implements CompoundButton.OnCheckedChangeListener {
+class CheckBoxBinder extends Binder<Boolean> implements CompoundButton.OnCheckedChangeListener {
 
     @Override
     public void setup() {

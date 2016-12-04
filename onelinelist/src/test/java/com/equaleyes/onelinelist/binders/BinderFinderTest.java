@@ -1,6 +1,10 @@
-package com.equaleyes.onelinelist;
+package com.equaleyes.onelinelist.binders;
 
+import com.equaleyes.onelinelist.CorruptedBinder;
+import com.equaleyes.onelinelist.PrivateConstructorBinder;
+import com.equaleyes.onelinelist.TestData;
 import com.equaleyes.onelinelist.binders.Binder;
+import com.equaleyes.onelinelist.binders.BinderFinder;
 import com.equaleyes.onelinelist.binders.BoldOnEvenBinder;
 import com.equaleyes.onelinelist.binders.TextViewBinder;
 
@@ -104,7 +108,7 @@ public class BinderFinderTest {
         binderFinder.findBindersForField(textTestField);
     }
 
-    public <T> BinderFinder getBinderFinderWithBinders(Class<? extends Binder>... tClass) {
+    public BinderFinder getBinderFinderWithBinders(Class<? extends Binder>... tClass) {
         BinderFinder binderFinder = new BinderFinder();
         binderFinder.binders.clear();
 

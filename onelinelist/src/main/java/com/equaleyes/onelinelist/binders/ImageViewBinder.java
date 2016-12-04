@@ -7,7 +7,7 @@ import com.equaleyes.onelinelist.annotations.Image;
 
 import java.lang.annotation.Annotation;
 
-public class ImageViewBinder extends Binder<String> {
+class ImageViewBinder extends Binder<String> {
 
     @Override
     public Class<? extends Annotation> getAnnotationType() {

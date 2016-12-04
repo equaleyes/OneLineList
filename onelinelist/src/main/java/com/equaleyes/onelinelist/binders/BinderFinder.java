@@ -1,11 +1,5 @@
-package com.equaleyes.onelinelist;
+package com.equaleyes.onelinelist.binders;
 
-import com.equaleyes.onelinelist.binders.Binder;
-import com.equaleyes.onelinelist.binders.BoldOnEvenBinder;
-import com.equaleyes.onelinelist.binders.CheckBoxBinder;
-import com.equaleyes.onelinelist.binders.ImageViewBinder;
-import com.equaleyes.onelinelist.binders.TextViewBinder;
-import com.equaleyes.onelinelist.binders.TextViewTextColorBinder;
 import com.equaleyes.onelinelist.utils.ArrayListUtils;
 
 import java.lang.annotation.Annotation;
@@ -36,7 +30,9 @@ public class BinderFinder {
                 if (field.isAnnotationPresent(annotationTypeForBinder)) {
                     try {
                         bindersForField.add(binder.getClass().newInstance());
-                    } catch (InstantiationException | IllegalAccessException e) {
+                    } catch (InstantiationException e) {
+                        e.printStackTrace();
+                    } catch (IllegalAccessException e) {
                         e.printStackTrace();
                     }
                 }

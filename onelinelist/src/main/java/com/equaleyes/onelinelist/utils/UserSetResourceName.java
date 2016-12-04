@@ -7,7 +7,7 @@ import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-public class UserSetResourceName {
+class UserSetResourceName {
 
     //Any one line list annotations that need a method for user set resource name, must use this required method name
     private static final String RESOURCE_METHOD_NAME = "resourceName";

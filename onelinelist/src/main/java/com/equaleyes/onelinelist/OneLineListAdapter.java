@@ -6,12 +6,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.equaleyes.onelinelist.binders.BinderFinder;
 import com.equaleyes.onelinelist.listeners.OnItemClickListener;
 import com.equaleyes.onelinelist.utils.ArrayListUtils;
 
 import java.util.ArrayList;
 
-public class OneLineListAdapter<T> extends RecyclerView.Adapter<OneLineListViewHolder<T>> implements View.OnClickListener {
+class OneLineListAdapter<T> extends RecyclerView.Adapter<OneLineListViewHolder<T>> implements View.OnClickListener {
 
     int layoutId;
     Class classType;

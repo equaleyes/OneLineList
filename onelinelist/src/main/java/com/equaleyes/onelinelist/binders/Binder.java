@@ -35,7 +35,7 @@ public abstract class Binder<T> {
             e.printStackTrace();
         }
         catch (ClassCastException e) {
-            Log.e("Wrong field type", "field -> " + field.getName());
+            Log.e("Wrong field type", field.getName());
         }
     }
 

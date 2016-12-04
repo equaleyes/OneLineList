@@ -6,6 +6,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.equaleyes.onelinelist.binders.Binder;
+import com.equaleyes.onelinelist.binders.BinderFinder;
 import com.equaleyes.onelinelist.listeners.OnItemClickListener;
 
 import java.util.ArrayList;

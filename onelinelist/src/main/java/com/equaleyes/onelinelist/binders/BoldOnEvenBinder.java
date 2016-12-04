@@ -7,7 +7,7 @@ import com.equaleyes.onelinelist.annotations.BoldOnEven;
 
 import java.lang.annotation.Annotation;
 
-public class BoldOnEvenBinder extends Binder {
+class BoldOnEvenBinder extends Binder {
 
     @Override
     public Class<? extends Annotation> getAnnotationType() {
